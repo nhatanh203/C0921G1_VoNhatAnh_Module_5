@@ -1,0 +1,42 @@
+<h1 style="text-align: center">Register Form</h1>
+<form [formGroup]="registerForm">
+  <div style="text-align: center">
+    <p>Email : <input type="text" formControlName="email"></p>
+    <p style="color: red" *ngIf="registerForm.controls.email.hasError('email')">Invalid Email</p>
+    <p>Country :
+      <select formControlName="country">
+        <option value="Vietnam">Viet Nam</option>
+        <option value="Canada">Canada</option>
+        <option value="Russia">Russia</option>
+      </select>
+    </p>
+    <p>Age : <input type="date" formControlName="age"></p>
+    <p style="color: red" *ngIf="registerForm.controls.age.hasError('not18')">Age > 18</p>
+    <p>Phone Number : <input type="text" formControlName="phone"></p>
+    <p style="color: red" *ngIf="registerForm.controls.phone.hasError('pattern')">+84 Valid Number Phone</p>
+    <p >
+      Gender :
+    </p>
+    <div>
+      <input type="radio" id="html" formControlName="gender" value="Male">
+      <label for="html">Male</label><br>
+      <input type="radio" id="css" formControlName="gender" value="Female">
+      <label for="css">Female</label><br>
+      <input type="radio" id="javascript" formControlName="gender" value="Other">
+      <label for="javascript">Other</label>
+    </div>
+    <div formGroupName="passwordGroup">
+      <p>Password : <input type="text" formControlName="password"></p>
+      <p>Password Cofirm : <input type="text" formControlName="passwordConfirm"></p>
+    </div>
+
+    <p style="color: red" *ngIf="registerForm.controls.pwGroup.hasError('wrongPassword')">Passwords do not match</p>
+    <p style="color: red" *ngIf="registerForm.get('passwordGroup.password').hasError('minlength')">Password must be at least 6 . in length</p>
+    <button (click)="getInfoUser()">Create</button>
+  </div>
+</form>
+
+
+
+
+
