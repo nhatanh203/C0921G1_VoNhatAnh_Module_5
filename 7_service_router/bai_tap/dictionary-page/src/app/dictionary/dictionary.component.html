@@ -1,0 +1,15 @@
+<h1>Dictionary</h1>
+<div style="text-align: center">
+  <table border="1px">
+    <tr>
+      <td>Stt</td>
+      <td>Word</td>
+      <td>Detail</td>
+    </tr>
+    <tr *ngFor="let iWord of words; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{iWord.word}}</td>
+      <a routerLink="/detail/{{iWord.word}}">Detail</a>
+    </tr>
+  </table>
+</div>
