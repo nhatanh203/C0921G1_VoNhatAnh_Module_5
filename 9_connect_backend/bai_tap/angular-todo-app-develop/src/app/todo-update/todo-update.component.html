@@ -1,0 +1,17 @@
+<h2>Update Student</h2>
+
+<form [formGroup]="todoForm" (ngSubmit)="updateInfoTodo()">
+  <div>
+    content:
+    <input type="text" formControlName="content" />
+  </div>
+
+  <div>
+    complete:
+    <input type="text" formControlName="complete" />
+  </div>
+
+  <div>
+    <input type="submit" value="Update" />
+  </div>
+</form>

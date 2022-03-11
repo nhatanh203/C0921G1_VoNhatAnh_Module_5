@@ -1,0 +1,39 @@
+<!--<h2 class="text-center">-->
+<!--  Todo App-->
+<!--</h2>-->
+<!--<div class="col-md-8 offset-md-2">-->
+<!--  <input type="text" class="form-control" [formControl]="content" (change)="change()">-->
+<!--  <ul>-->
+<!--    <li (click)="toggleTodo(i)"-->
+<!--        [class.complete]="todo.complete"-->
+<!--        *ngFor="let todo of todos; index as i">-->
+<!--      {{todo.content}}-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+<a routerLink="/create">Create todo</a>
+<h2>Todo List</h2>
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th>Id</th>
+      <th>Content</th>
+      <th>Complete</th>
+      <th colspan="3">Action</th>
+    </tr>
+    <tr *ngFor="let todo of todos;index as i">
+      <td>{{i + 1}}</td>
+      <td>{{todo.id}}</td>
+      <td>{{todo.content}}</td>
+      <td>{{todo.complete}}</td>
+      <td>
+        <a routerLink="/detail/{{todo.id}}">Detail</a>
+      </td>
+      <td>
+        <a routerLink="/update/{{todo.id}}">Update</a>
+      </td>
+      <td>
+        <a routerLink="/delete/{{todo.id}}">Delete</a>
+      </td>
+    </tr>
+  </table>
