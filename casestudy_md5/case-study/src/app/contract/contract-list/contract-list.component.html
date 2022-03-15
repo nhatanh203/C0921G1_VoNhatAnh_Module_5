@@ -1,0 +1,57 @@
+<span>
+  <h2 style="text-align: center;margin-top:100px">CONTRACT LIST</h2>
+  <button  class="btn btn-primary btn-lg" routerLink="/contract/create">Create Contract</button>
+  <hr>
+  <!--  <div class="input-group mb-3">-->
+  <!--    <input type="text" class="form-control" placeholder="Input ID" aria-label="Input ID"-->
+  <!--           aria-describedby="button-addon2">-->
+  <!--    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>-->
+  <!--  </div>-->
+  <!--  <hr>-->
+  <div class="form-group col-md-4">
+  <input style="margin-left: 500px" type="text" class="form-control"  placeholder="Enter word to search" [(ngModel)]="searchedKeyword">
+</div>
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Contract ID</th>
+    <th scope="col">Employee ID</th>
+    <th scope="col">Employee Name</th>
+    <th scope="col">Customer ID</th>
+    <th scope="col">Customer Name</th>
+    <th scope="col">Service ID</th>
+    <th scope="col">Service Name</th>
+    <th scope="col">Start Date</th>
+    <th scope="col">End Date</th>
+    <th scope="col">Deposit</th>
+    <th scope="col">Total</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody style="background-color: #f7f5f2">
+  <tr *ngFor="let ct of contractList | filter:searchedKeyword ">
+    <td>{{ct.id}}</td>
+    <td>{{ct.employee.id}}</td>
+    <td>{{ct.employee.name}}</td>
+    <td>{{ct.customer.id}}</td>
+    <td>{{ct.customer.name}}</td>
+    <td>{{ct.service.id}}</td>
+    <td>{{ct.service.name}}</td>
+    <td>{{ct.startDate}}</td>
+    <td>{{ct.endDate}}</td>
+    <td>{{ct.deposit}}</td>
+    <td>{{ct.total}}</td>
+    <td>
+      <button class="btn btn-primary btn-warning" type="button"><a style="color: black" routerLink="/contract/update/{{this.ct.id}}">Edit</a>
+      </button>
+    </td>
+    <td>
+      <button class="btn btn-primary btn-danger">
+        <a style="color: black" routerLink="/contract/delete/{{this.ct.id}}">Delete</a>
+      </button>
+
+    </td>
+  </tr>
+  </tbody>
+</table>

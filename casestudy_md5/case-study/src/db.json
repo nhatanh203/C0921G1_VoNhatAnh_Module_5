@@ -1,0 +1,514 @@
+{
+  "customer-type": [
+    {
+      "id": 1,
+      "name": "Diamond"
+    },
+    {
+      "id": 2,
+      "name": "Platinum"
+    },
+    {
+      "id": 3,
+      "name": "Gold"
+    },
+    {
+      "id": 4,
+      "name": "Silver"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "customer": [
+    {
+      "code": "KH-0001",
+      "name": "Nhật Anh",
+      "customerType": {
+        "id": 1,
+        "name": "Diamond"
+      },
+      "birthday": "1998-05-12",
+      "idCard": "201753690",
+      "phone": "0905858501",
+      "email": "quangnhatnguyen2011@gmail.com",
+      "address": "K10/17  Phạm Văn Nghị",
+      "id": 1
+    },
+    {
+      "code": "KH-0002",
+      "name": "Nguyễn Duy",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "birthday": "1997-11-30",
+      "idCard": "200774883",
+      "phone": "0915777777",
+      "email": "hquac@gmail.com",
+      "address": "Hà Nội",
+      "id": 2
+    },
+    {
+      "code": "KH-0292",
+      "name": "Nguyen Duc A",
+      "customerType": {
+        "id": 2,
+        "name": "Platinum"
+      },
+      "birthday": "2001-03-13",
+      "idCard": "1923901203",
+      "phone": "0901823983",
+      "email": "jackmaa123@gmaill.com",
+      "address": "Vinh",
+      "id": 3
+    }
+  ],
+  "position": [
+    {
+      "id": 1,
+      "name": "Receptionist"
+    },
+    {
+      "id": 2,
+      "name": "Waiter"
+    },
+    {
+      "id": 3,
+      "name": "Specialist"
+    },
+    {
+      "id": 4,
+      "name": "Moderator"
+    },
+    {
+      "id": 5,
+      "name": "Manager"
+    },
+    {
+      "id": 6,
+      "name": "Director"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "name": "Highschool"
+    },
+    {
+      "id": 2,
+      "name": "College"
+    },
+    {
+      "id": 3,
+      "name": "University"
+    },
+    {
+      "id": 4,
+      "name": "Post-Graduated"
+    }
+  ],
+  "division": [
+    {
+      "id": 1,
+      "name": "Sale-Marketing"
+    },
+    {
+      "id": 2,
+      "name": "Administrative"
+    },
+    {
+      "id": 3,
+      "name": "Service"
+    },
+    {
+      "id": 4,
+      "name": "Management"
+    }
+  ],
+  "employee": [
+    {
+      "code": "NV-0001",
+      "name": "Phạm Nguyên Vũ",
+      "birthday": "1998-11-16",
+      "idCard": "204897000",
+      "phone": "0913457291",
+      "email": "levu@gmail.com",
+      "education": {
+        "id": 3,
+        "name": "University"
+      },
+      "position": {
+        "id": 4,
+        "name": "Moderator"
+      },
+      "division": {
+        "id": 1,
+        "name": "Sale-Marketing"
+      },
+      "salary": "12000000",
+      "id": 1
+    },
+    {
+      "code": "NV-2139",
+      "name": "23423",
+      "birthday": "2003-03-19",
+      "idCard": "9128391239",
+      "phone": "0902727323",
+      "email": "huudu@gmaill.com",
+      "education": {
+        "id": 2,
+        "name": "College"
+      },
+      "position": {
+        "id": 4,
+        "name": "Moderator"
+      },
+      "division": {
+        "id": 2,
+        "name": "Administrative"
+      },
+      "salary": "1238838",
+      "id": 3
+    }
+  ],
+  "rent-type": [
+    {
+      "id": 1,
+      "name": "Year",
+      "price": 50000000
+    },
+    {
+      "id": 2,
+      "name": "Month",
+      "price": 10000000
+    },
+    {
+      "id": 3,
+      "name": "Day",
+      "price": 1000000
+    },
+    {
+      "id": 4,
+      "name": "Hour",
+      "price": 200000
+    }
+  ],
+  "service": [
+    {
+      "code": "DV-0001",
+      "name": "VL-0001",
+      "area": "120",
+      "numberFloor": "3",
+      "maxPeople": "6",
+      "price": "6500000",
+      "rentType": {
+        "id": 3,
+        "name": "Day",
+        "price": 1000000
+      },
+      "status": "Available",
+      "id": 1
+    },
+    {
+      "code": "DV-0002",
+      "name": "VL-0002",
+      "area": "150",
+      "numberFloor": "3",
+      "maxPeople": "10",
+      "price": "8000000",
+      "rentType": {
+        "id": 3,
+        "name": "Day",
+        "price": 1000000
+      },
+      "status": "Available",
+      "id": 2
+    }
+  ],
+  "attach-service": [
+    {
+      "id": 1,
+      "name": "Massage",
+      "unit": 1,
+      "price": 500000
+    },
+    {
+      "id": 2,
+      "name": "Karaoke",
+      "unit": 1,
+      "price": 200000
+    },
+    {
+      "id": 3,
+      "name": "Food",
+      "unit": 1,
+      "price": 120000
+    },
+    {
+      "id": 4,
+      "name": "Water",
+      "unit": 1,
+      "price": 30000
+    },
+    {
+      "id": 5,
+      "name": "Rent Car",
+      "unit": 1,
+      "price": 250000
+    }
+  ],
+  "contract-detail": [
+    {
+      "contract": {
+        "employee": {
+          "code": "NV-0001",
+          "name": "Lê Anh",
+          "birthday": "1998-11-16",
+          "idCard": "204897000",
+          "phone": "0913457291",
+          "email": "leanh@gmail.com",
+          "education": {
+            "id": 3,
+            "name": "University"
+          },
+          "position": {
+            "id": 4,
+            "name": "Moderator"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "salary": "12000000",
+          "id": 1
+        },
+        "customer": {
+          "code": "KH-0001",
+          "name": "Nguyễn Quang Nhật",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          },
+          "birthday": "1998-05-12",
+          "idCard": "201753690",
+          "phone": "0905858501",
+          "email": "quangnhatnguyen2011@gmail.com",
+          "address": "K10/17  Phạm Văn Nghị",
+          "id": 1
+        },
+        "service": {
+          "code": "DV-0002",
+          "name": "VL-0002",
+          "area": "150",
+          "numberFloor": "3",
+          "maxPeople": "10",
+          "price": "8000000",
+          "rentType": {
+            "id": 3,
+            "name": "Day",
+            "price": 1000000
+          },
+          "status": "Available",
+          "id": 2
+        },
+        "startDate": "2021-12-16",
+        "endDate": "2021-12-18",
+        "deposit": "500000",
+        "id": 1
+      },
+      "attachService": {
+        "id": 2,
+        "name": "Karaoke",
+        "unit": 1,
+        "price": 200000
+      },
+      "quantity": "2",
+      "id": 1
+    },
+    {
+      "contract": {
+        "employee": {
+          "code": "NV-0001",
+          "name": "Lê Anh",
+          "birthday": "1998-11-16",
+          "idCard": "204897000",
+          "phone": "0913457291",
+          "email": "leanh@gmail.com",
+          "education": {
+            "id": 3,
+            "name": "University"
+          },
+          "position": {
+            "id": 4,
+            "name": "Moderator"
+          },
+          "division": {
+            "id": 1,
+            "name": "Sale-Marketing"
+          },
+          "salary": "12000000",
+          "id": 1
+        },
+        "customer": {
+          "code": "KH-0001",
+          "name": "Nguyễn Quang Nhật",
+          "customerType": {
+            "id": 1,
+            "name": "Diamond"
+          },
+          "birthday": "1998-05-12",
+          "idCard": "201753690",
+          "phone": "0905858501",
+          "email": "quangnhatnguyen2011@gmail.com",
+          "address": "K10/17  Phạm Văn Nghị",
+          "id": 1
+        },
+        "service": {
+          "code": "DV-0002",
+          "name": "VL-0002",
+          "area": "150",
+          "numberFloor": "3",
+          "maxPeople": "10",
+          "price": "8000000",
+          "rentType": {
+            "id": 3,
+            "name": "Day",
+            "price": 1000000
+          },
+          "status": "Available",
+          "id": 2
+        },
+        "startDate": "2021-12-16",
+        "endDate": "2021-12-18",
+        "deposit": "500000",
+        "id": 1
+      },
+      "attachService": {
+        "id": 4,
+        "name": "Water",
+        "unit": 1,
+        "price": 30000
+      },
+      "quantity": "3",
+      "id": 2
+    }
+  ],
+  "contract": [
+    {
+      "employee": {
+        "code": "NV-0001",
+        "name": "Lê Anh",
+        "birthday": "1998-11-16",
+        "idCard": "204897000",
+        "phone": "0913457291",
+        "email": "leanh@gmail.com",
+        "education": {
+          "id": 3,
+          "name": "University"
+        },
+        "position": {
+          "id": 4,
+          "name": "Moderator"
+        },
+        "division": {
+          "id": 1,
+          "name": "Sale-Marketing"
+        },
+        "salary": "12000000",
+        "id": 1
+      },
+      "customer": {
+        "code": "KH-0001",
+        "name": "Nguyễn Quang Nhật",
+        "customerType": {
+          "id": 1,
+          "name": "Diamond"
+        },
+        "birthday": "1998-05-12",
+        "idCard": "201753690",
+        "phone": "0905858501",
+        "email": "quangnhatnguyen2011@gmail.com",
+        "address": "K10/17  Phạm Văn Nghị",
+        "id": 1
+      },
+      "service": {
+        "code": "DV-0002",
+        "name": "VL-0002",
+        "area": "150",
+        "numberFloor": "3",
+        "maxPeople": "10",
+        "price": "8000000",
+        "rentType": {
+          "id": 3,
+          "name": "Day",
+          "price": 1000000
+        },
+        "status": "Available",
+        "id": 2
+      },
+      "startDate": "2021-12-16",
+      "endDate": "2021-12-18",
+      "deposit": "500000",
+      "id": 1
+    },
+    {
+      "employee": {
+        "code": "NV-0001",
+        "name": "Lê Anh",
+        "birthday": "1998-11-16",
+        "idCard": "204897000",
+        "phone": "0913457291",
+        "email": "leanh@gmail.com",
+        "education": {
+          "id": 3,
+          "name": "University"
+        },
+        "position": {
+          "id": 4,
+          "name": "Moderator"
+        },
+        "division": {
+          "id": 1,
+          "name": "Sale-Marketing"
+        },
+        "salary": "12000000",
+        "id": 1
+      },
+      "customer": {
+        "code": "KH-0002",
+        "name": "Nhật Anh",
+        "customerType": {
+          "id": 2,
+          "name": "Platinum"
+        },
+        "birthday": "1997-11-30",
+        "idCard": "200774883",
+        "phone": "0915777777",
+        "email": "hquac@gmail.com",
+        "address": "Hà Nội",
+        "id": 2
+      },
+      "service": {
+        "code": "DV-0001",
+        "name": "VL-0001",
+        "area": "120",
+        "numberFloor": "3",
+        "maxPeople": "6",
+        "price": "6500000",
+        "rentType": {
+          "id": 3,
+          "name": "Day",
+          "price": 1000000
+        },
+        "status": "Available",
+        "id": 1
+      },
+      "startDate": "2022-02-23",
+      "endDate": "2022-02-25",
+      "deposit": "50000",
+      "id": 2
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<span>
+  <h2 style="text-align: center;margin-top:100px">CUSTOMER LIST</h2>
+  <button class="btn btn-primary btn-lg" routerLink="/create">Create Customer</button>
+  <hr>
+<!--  <div class="input-group mb-3">-->
+<!--    <input type="text" class="form-control" placeholder="Input ID" aria-label="Input ID"-->
+<!--           aria-describedby="button-addon2">-->
+<!--    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>-->
+<!--  </div>-->
+<!--  <hr>-->
+  <div class="form-group col-md-4">
+  <input style="margin-left: 500px" type="text" class="form-control"  placeholder="Enter word to search" [(ngModel)]="searchedKeyword">
+</div>
+</span>
+<table class="table table-striped">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Customer ID</th>
+    <th scope="col">Customer Code</th>
+    <th scope="col">Customer Name</th>
+    <th scope="col">Birthday</th>
+    <th scope="col">Customer Type</th>
+    <th scope="col">ID Card</th>
+    <th scope="col">Phone Number</th>
+    <th scope="col">Email</th>
+    <th scope="col">Address</th>
+    <th scope="col">Edit</th>
+    <th scope="col">Delete</th>
+  </tr>
+  </thead>
+  <tbody style="background-color: #f7f5f2">
+  <tr *ngFor="let cus of customerList | paginate: { itemsPerPage: 5, currentPage: page } | filter:searchedKeyword">
+    <td>{{cus.id}}</td>
+    <td>{{cus.code}}</td>
+    <td>{{cus.name}}</td>
+    <td>{{cus.birthday}}</td>
+    <td>{{cus.customerType.name}}</td>
+    <td>{{cus.idCard}}</td>
+    <td>{{cus.phone}}</td>
+    <td>{{cus.email}}</td>
+    <td>{{cus.address}}</td>
+    <td>
+      <button class="btn btn-primary btn-warning" type="button"><a style="color: black"
+                                                                   [routerLink]="['/update', cus.id]">Edit</a>
+      </button>
+    </td>
+    <td>
+      <button (click)="delete(cus.id)" type="button" class="btn btn-primary btn-danger" data-toggle="modal"
+              data-target="#modalDelete">
+        Delete
+      </button>
+      <!--      <button class="btn btn-primary">-->
+      <!--        <a style="color: black" routerLink="/customer/delete/{{this.cus.id}}">Delete</a>-->
+      <!--      </button>-->
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="modalDelete" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you want to delete?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary btn-warning" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary btn-danger" (click)="deleteCustomer()" data-dismiss="modal">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
